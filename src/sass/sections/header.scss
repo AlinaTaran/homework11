@@ -1,0 +1,122 @@
+.header {
+  padding: 38px 0 228px 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(../images/banner.jpg); 
+  @media (min-resolution: 192dpi) {
+       background-image: linear-gradient(0deg, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(../images/banner@2x.jpg);  
+   }
+&__navigation {
+ margin-bottom: 138px;
+ }
+ 
+ &__description {
+ margin-bottom: 38px;
+font-family: $second-font;
+ font-size: 72px;
+ line-height: 1.2;
+ text-align: center;
+ font-weight: 400;
+ }
+ 
+ &__title {
+ margin: 0 auto;
+ margin-bottom: 56px;
+ font-size: 150px;
+ font-weight: 700;
+ text-transform: uppercase;
+ text-align: center;
+ max-width: 828px;
+ }
+ 
+ }
+
+.navigation {
+  @include flex;
+  align-items: center;
+  
+}
+
+.logotype {
+font-family: $main-font;
+ font-size: 30px;
+ color: rgb(255, 255, 255);
+ font-weight: 700;
+ line-height: 1.2;
+ }
+ 
+ .navigation-list {
+   display: flex;
+   margin-left: auto;
+   
+   &__item {
+   margin-right: 58px;
+ }
+ 
+ &__link {
+ position: relative;
+ transition: all 0.2s linear;
+font-family: $main-font;
+ font-size: 14px;
+ color: rgb(255, 255, 255);
+ text-transform: uppercase;
+ line-height: 1.2;
+ 
+ &::after {
+   position: absolute;
+   display: block;
+   width: 100%;
+   content: "";
+   height: 3px;
+   background-color:  rgb(252, 227, 138);
+   bottom: -10px;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.2s linear;
+ }
+ 
+ &:hover::after {
+   opacity: 1;
+   visibility: visible;
+ }
+ }
+ }
+ 
+.navigation-list a:hover,
+.navigation-list a:focus {
+  color: rgb(252, 227, 138);
+}
+ 
+ .shopping-list {
+ display: flex;
+ 
+ &__item:not(:last-child) {
+ margin-right: 58px;
+ }
+ 
+ &__icon {
+ width: 18px;
+ height: 18px;
+ fill: #fff;
+ 
+ &:hover {
+ fill: rgb(252, 227, 138);
+ transform: scale(1.5);
+ }
+ }
+ }
+ 
+ .btn-more {
+ display: block;
+ margin: 0 auto;
+ font-size: 14px;
+ color: rgb(255, 255, 255);
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 1.2;
+ background-color: rgba(0, 0, 0, 0);
+ border: 3px solid rgb(255, 255, 255);
+ width: 164px;
+ height: 44px;
+ }
